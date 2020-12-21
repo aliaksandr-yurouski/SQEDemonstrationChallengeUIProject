@@ -1,5 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="DemoProject" verbose="10">
+<suite name="DemoProject" verbose="10" thread-count="1">
+	<listeners>
+		<listener class-name="com.sample.core.listener.TestListener"></listener>
+	</listeners>
 	<test name="Tests">
 		<!-- Enter group name to execute specific set of tests -->
 		<groups>
@@ -7,7 +10,7 @@
 		</groups>
 		<!-- List individual packages to execute below -->
 		<packages>
-			<package name="com.sample.test.demo.tests.*" />
+			<package name="com.sample.test.*" />
 		</packages>
 	</test>
 </suite>

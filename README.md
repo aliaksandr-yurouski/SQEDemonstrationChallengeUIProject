@@ -1,5 +1,9 @@
 ## Demo Challenge
 
+Test automation solution is written on macos system and checked only for this OS
+To run test automation suite execute `mvn clean test -DsuiteXmlFile=/src/test/resources/testng.xml`
+To show allure report for the run execute `mvn allure:serve` 
+
 #### Instructions
 1. Complete the project setup as listed below
 2. Complete the Excerise
@@ -44,5 +48,20 @@ We will be evaluating
 
 #### Test Cases
 
- 1.  
-
+ 1. Check correct cost calculation test;
+ 2. Check validation for mandatory fields to proceed the order test('Name' and 'Phone' fields).
+ 3. Check behavior of Payment Information pickers test.
+ 4. Check placing the order functionality test.
+ 5. Check quantity and cost fields validation test.
+ 6. Check reset order form functionality test.
+ 
+ #### Issues
+ 
+ 1. 'Credit Card' and 'Cash on Pickup' options can be picked both in the same time.
+ 2. Need to verify expected behavior. No validation for input value for 'Phone' field, can be set characters.
+ 3. Need to verify expected behavior. No validation for input value for 'Email' field, type='TEXT'.
+ 4. 'Toppings 1' and 'Toppings2' fields does not return to the initial field after click on 'Reset' button.
+ 5. Typo in 'Toppings2' name of field, should be 'Toppings 2' similarly to 'Toppings 1' field.
+ 6. No validation for 'Quantity' field. Field can be filled with negative values, letters, special characters.
+ 7. Quantity field does not fit entered value with length more than 3 numbers. The value is clipped by field borders.
+ 8. Need to verify expected behavior. It's possible to select both toppings if selected pizza type without toppings or with only one topping.
