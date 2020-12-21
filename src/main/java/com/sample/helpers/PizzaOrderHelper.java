@@ -3,8 +3,6 @@ package com.sample.helpers;
 import com.sample.model.OrderForm;
 import com.sample.pageobject.PizzaOrderFormPage;
 
-import java.util.Optional;
-
 public class PizzaOrderHelper {
 
     private PizzaOrderHelper() {

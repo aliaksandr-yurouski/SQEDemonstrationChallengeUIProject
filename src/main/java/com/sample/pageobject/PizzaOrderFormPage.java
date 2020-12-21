@@ -11,6 +11,8 @@ import java.util.List;
 
 public class PizzaOrderFormPage {
 
+    private final static String VALUE_PARAMETER = "value";
+
     @FindBy(tagName = "center")
     private WebElement header;
 
@@ -100,7 +102,7 @@ public class PizzaOrderFormPage {
     }
 
     public String getQuantity() {
-        return this.pizza1QuantityInput.getAttribute("value");
+        return this.pizza1QuantityInput.getAttribute(VALUE_PARAMETER);
     }
 
     public void selectRadioCreditCard() {
@@ -120,7 +122,7 @@ public class PizzaOrderFormPage {
     }
 
     public String getCost() {
-        return this.pizza1CostTextField.getAttribute("value");
+        return this.pizza1CostTextField.getAttribute(VALUE_PARAMETER);
     }
 
     public void setEmail(String email) {
@@ -129,7 +131,7 @@ public class PizzaOrderFormPage {
     }
 
     public String getEmail() {
-        return this.emailInput.getAttribute("value");
+        return this.emailInput.getAttribute(VALUE_PARAMETER);
     }
 
     public void setName(String name) {
@@ -138,7 +140,7 @@ public class PizzaOrderFormPage {
     }
 
     public String getName() {
-        return this.nameInput.getAttribute("value");
+        return this.nameInput.getAttribute(VALUE_PARAMETER);
     }
 
     public void setPhone(String phone) {
@@ -147,7 +149,7 @@ public class PizzaOrderFormPage {
     }
 
     public String getPhone() {
-        return this.phoneInput.getAttribute("value");
+        return this.phoneInput.getAttribute(VALUE_PARAMETER);
     }
 
     public void clickPlaceOrderButton() {

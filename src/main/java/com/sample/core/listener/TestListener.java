@@ -16,17 +16,17 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
-        log.info("***** " + iTestResult.getName() + " test has started *****");
+        log.info(String.format("***** %s test has started *****", iTestResult.getName()));
     }
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-        log.info("***** " + iTestResult.getName() + " test has succeed *****");
+        log.info(String.format("***** %s test has succeed *****", iTestResult.getName()));
     }
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        log.info("***** Error " + iTestResult.getName() + " test has failed *****");
+        log.info(String.format("***** Error %s test has failed *****", iTestResult.getName()));
         String methodName = iTestResult.getName().trim();
         ITestContext context = iTestResult.getTestContext();
         WebDriver driver = (WebDriver)context.getAttribute("driver");
@@ -35,21 +35,21 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
-        log.info("***** " + iTestResult.getName() + " test has skipped *****");
+        log.info(String.format("***** %s test has skipped *****", iTestResult.getName()));
     }
 
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
-
+        log.info(String.format("***** %s test is failed but within success percentage *****", iTestResult.getName()));
     }
 
     @Override
     public void onStart(ITestContext iTestContext) {
-
+        log.info(String.format("***** %s class has started *****", iTestContext.getName()));
     }
 
     @Override
     public void onFinish(ITestContext iTestContext) {
-
+        log.info(String.format("***** %s class has started *****", iTestContext.getName()));
     }
 }
